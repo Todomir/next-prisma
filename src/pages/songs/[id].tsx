@@ -48,7 +48,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export default function SongPage({ song }: AppProps): JSX.Element {
-  console.log(song)
   return (
     <Container>
       <Head>

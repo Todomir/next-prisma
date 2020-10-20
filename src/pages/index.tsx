@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { PrismaClient } from '@prisma/client'
 
 import { Container } from '../styles/pages/Home'
+import Song from '../components/Song'
 
 interface AppProps {
   songs: [
@@ -35,13 +36,19 @@ export default function Home({ songs }: AppProps): JSX.Element {
   return (
     <Container>
       <Head>
-        <title>Next App Boilerplate</title>
+        <title>Next + Prisma</title>
       </Head>
 
       <main>
         <ul>
           {songs.map(song => (
-            <li key={song.id}>{song.name}</li>
+            <Song
+              key={song.id}
+              id={song.id}
+              artistName={song.artist.name}
+              title={song.name}
+              cover={song.albumCoverUrl}
+            />
           ))}
         </ul>
       </main>

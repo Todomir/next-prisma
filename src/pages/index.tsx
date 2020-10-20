@@ -30,7 +30,6 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 export default function Home({ songs }: AppProps): JSX.Element {
-  console.log(songs)
   return (
     <Container>
       <Head>

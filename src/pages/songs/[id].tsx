@@ -13,7 +13,7 @@ interface AppProps {
       name: string
     }
     artistId: number
-    youtubeId: string
+    youtubeID: string
     albumCoverUrl: string
     id: number
     name: string
@@ -61,7 +61,7 @@ export default function SongPage({ song }: AppProps): JSX.Element {
         <Iframe
           width="100%"
           height="500"
-          src={`https://www.youtube.com/embed/${song.youtubeId}`}
+          src={`https://www.youtube.com/embed/${song.youtubeID}`}
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

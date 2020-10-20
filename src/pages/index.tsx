@@ -13,6 +13,8 @@ interface AppProps {
         name: string
       }
       artistId: number
+      youtubeId: string
+      albumCoverUrl: string
       id: number
       name: string
     }
